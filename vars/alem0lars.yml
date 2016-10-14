@@ -1,0 +1,10 @@
+# => inherits: generic <= #
+
+
+downloads_dir: /data/downloads
+torrent:
+  downloads_speed: 192
+  upload_speed: 4
+
+
+# vim: set filetype=eruby.yaml :
