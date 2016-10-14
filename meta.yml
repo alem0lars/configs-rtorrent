@@ -1,0 +1,8 @@
+elems:
+
+  - src:  rtorrent/(rtorrent.rc)$
+    dst:  ~/.<1>
+    only: f?rtorrent
+
+
+# vim: set filetype=eruby.yaml :
