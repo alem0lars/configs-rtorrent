@@ -1,34 +1,34 @@
-" ─────────────────────────────────────────────────────────────────────────────┐
-"                                                                              │
-" Name:    elems/rtorrent.rc.tt                                                │
-" Summary: rTorrent configuration file.                                        │
-" Authors:                                                                     │
-"   - Alessandro Molari <molari.alessandro@gmail.com> (alem0lars)              │
-"                                                                              │
-" Project:                                                                     │
-"   - Homepage:        https://github.com/alem0lars/configs-rtorrent           │
-"   - Getting started: see README.md in the project root folder                │
-"                                                                              │
-" License: Apache v2.0 (see below)                                             │
-"                                                                              │
-" ─────────────────────────────────────────────────────────────────────────────┤
-"                                                                              │
-" Licensed to the Apache Software Foundation (ASF) under one more contributor  │
-" license agreements.  See the NOTICE file distributed with this work for      │
-" additional information regarding copyright ownership. The ASF licenses this  │
-" file to you under the Apache License, Version 2.0 (the "License"); you may   │
-" not use this file except in compliance with the License.                     │
-" You may obtain a copy of the License at                                      │
-"                                                                              │
-"   http://www.apache.org/licenses/LICENSE-2.0                                 │
-"                                                                              │
-" Unless required by applicable law or agreed to in writing, software          │
-" distributed under the License is distributed on an "AS IS" BASIS, WITHOUT    │
-" WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.             │
-" See the License for the specific language governing permissions and          │
-" limitations under the License.                                               │
-"                                                                              │
-" ─────────────────────────────────────────────────────────────────────────────┤
+# ─────────────────────────────────────────────────────────────────────────────┐
+#                                                                              │
+# Name:    elems/rtorrent.rc.tt                                                │
+# Summary: rTorrent configuration file.                                        │
+# Authors:                                                                     │
+#   - Alessandro Molari <molari.alessandro@gmail.com> (alem0lars)              │
+#                                                                              │
+# Project:                                                                     │
+#   - Homepage:        https://github.com/alem0lars/configs-rtorrent           │
+#   - Getting started: see README.md in the project root folder                │
+#                                                                              │
+# License: Apache v2.0 (see below)                                             │
+#                                                                              │
+# ─────────────────────────────────────────────────────────────────────────────┤
+#                                                                              │
+# Licensed to the Apache Software Foundation (ASF) under one more contributor  │
+# license agreements.  See the NOTICE file distributed with this work for      │
+# additional information regarding copyright ownership. The ASF licenses this  │
+# file to you under the Apache License, Version 2.0 (the "License"); you may   │
+# not use this file except in compliance with the License.                     │
+# You may obtain a copy of the License at                                      │
+#                                                                              │
+#   http://www.apache.org/licenses/LICENSE-2.0                                 │
+#                                                                              │
+# Unless required by applicable law or agreed to in writing, software          │
+# distributed under the License is distributed on an "AS IS" BASIS, WITHOUT    │
+# WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.             │
+# See the License for the specific language governing permissions and          │
+# limitations under the License.                                               │
+#                                                                              │
+# ─────────────────────────────────────────────────────────────────────────────┤
 <% define_locals do
   variable :downloads_dir, type: :directory
   variable :"torrent.download_speed", type: :int, as: :download_speed
@@ -40,7 +40,7 @@
   computed(:max_peers_seed) { Integer(local!(:upload_speed) * 0.4) }
   computed(:max_uploads) { Integer(1 + (local!(:upload_speed) / 6)) }
 end %>
-" ─────────────────────────────────────────────────────────────────────────────┘
+# ─────────────────────────────────────────────────────────────────────────────┘
 
 
 # Maximum and minimum number of peers to connect to per torrent.
@@ -119,3 +119,6 @@ dht_port = 6881
 
 # Enable peer exchange (for torrents not marked private)
 peer_exchange = yes
+
+
+# vim: set filetype=eruby :

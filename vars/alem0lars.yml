@@ -2,8 +2,9 @@
 
 
 downloads_dir: /data/downloads
+
 torrent:
-  downloads_speed: 192
+  download_speed: 192
   upload_speed: 4
 
 
